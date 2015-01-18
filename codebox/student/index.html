@@ -1,0 +1,473 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>Code Cloud Student</title>
+	<link rel="shortcut icon" href="../images/codecloud.ico" />
+  <style type="text/css">
+	body {
+		font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+		margin: 0;
+		padding: 0;
+		color: #000; 
+		background-color:#EEEEEE;
+		height: 100vh;}
+		
+
+	/* ~~ Element/tag selectors ~~ */
+	ul, ol, dl { 
+		padding: 0;
+		margin: 0; }
+		
+	h1, h2, h3, h4, h5, h6, p {
+		margin-top: 0;
+		padding-right: 15px;
+		padding-left: 15px; }
+	
+	/* layout elements below */
+	header {
+		width: 100%;
+		font-family: "Helvetica";
+		font-size: 60px;
+		font-weight: 900;
+		height: 150px;
+		line-height: 150px;
+		color: #3cb0fd;
+		float: left;
+		padding: 10px;
+		background-color:#EEEEEE; }
+
+	.btn {
+  		background: #3498db;
+  		background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+		background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+		background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+		background-image: -o-linear-gradient(top, #3498db, #2980b9);
+		background-image: linear-gradient(to bottom, #3498db, #2980b9);
+		border: none;
+		font-family: Arial;
+		color: #ffffff;
+		font-size: 15px;
+		padding: 5px 10px 5px 10px;
+		text-decoration: none; }
+		
+	.btn:hover {
+	  	background: #3cb0fd;
+	  	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	  	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	  	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	  	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	  	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	  	text-decoration: none; }
+		
+	.content {
+		float: left;
+		padding-left: 20px;
+		background-color:#EEEEEE;
+		height: 100vh;}
+	
+	.codearea {
+		width: 500px;
+		height: 400px;
+		border: 1px solid #ccc;
+		padding: 10px; }
+	
+	.leftfooter {
+		float: left; }
+		
+	.logo {
+		float: left;
+		display: block;
+		padding-right: 60px;
+		padding-left: 20px;
+		padding-top: 30px; }
+	
+	.sidebar {
+		width: 175px;
+		height: 100vh;
+    	float: left; 
+		background-color:#EEEEEE }
+		
+	.sidebar dd {
+		margin-left: 0px;
+		width:auto; }
+		
+	.sidebar dd.active a {
+      background-color: #FFFFFF;
+      color: #222222; }
+	  
+	.sidebar dd.active a:hover {
+      background-color: #FFFFFF;
+      color: #222222; }
+	  
+	.sidebar dd a:hover {
+      background-color:#797979;
+      color: #222222; }
+	  
+	.sidebar dd a {
+		color: #000000;
+		text-decoration: none;
+		background-color:#BABABA; 
+		width: 100%;
+		padding-left: 10px;
+		height: 30px;
+		line-height: 30px; 
+		display: block; }
+	ul {
+	  text-align: left;
+	  display: inline;
+	  margin: 0;
+	  padding-left:15px;
+	  padding-right: 6px;
+	  width: 150px;
+	  list-style: none;
+	}	
+	
+	ul li {
+
+	  font: 15px arial;
+	  color: #ffffff;
+	  display: inline-block;
+	  margin-right: -4px;
+	  position: relative;
+	  padding: 5px 10px;
+	  width: 150px;
+	  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+		background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+		background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+		background-image: -o-linear-gradient(top, #3498db, #2980b9);
+		background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	  cursor: pointer;
+	  -webkit-transition: all 0.2s;
+	  -moz-transition: all 0.2s;
+	  -ms-transition: all 0.2s;
+	  -o-transition: all 0.2s;
+	  transition: all 0.2s;
+	}	
+	
+	ul li:hover {
+
+	  background: #555;
+	  color: #fff;
+	}	
+	
+	ul li ul {
+
+	  padding: 0;
+	  position: absolute;
+	  bottom: 0px;
+	  left: 0;
+	  width: 150px;
+	  -webkit-box-shadow: none;
+	  -moz-box-shadow: none;
+	  box-shadow: none;
+	  display: none;
+	  opacity: 0;
+	  visibility: hidden;
+	  -webkit-transiton: opacity 0.2s;
+	  -moz-transition: opacity 0.2s;
+	  -ms-transition: opacity 0.2s;
+	  -o-transition: opacity 0.2s;
+	  -transition: opacity 0.2s;
+	}
+	
+	ul li ul li { 
+	  background: #555; 
+	  display: block; 
+	  color: #fff;
+	}
+	
+	ul li ul li:hover { background: #666; }
+	
+	ul li:hover ul {
+	  display: block;
+	  opacity: 1;
+	  visibility: visible;
+	  position: absolute;
+	}
+	header, section, footer, aside, article, figure {
+		display: block; }
+	</style>
+  <meta http-equiv="X-UA-Compatible" content="IE=9">
+
+  <!-- Load the Realtime libraries. -->
+  <script type="text/javascript"
+          src="https://apis.google.com/js/api.js"></script>
+
+  <!-- Load the utility library. -->
+  <script type="text/javascript"
+          src="realtime-client-utils.js"></script>
+	<script src="http://ajaxorg.github.io/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<!-- Start Realtime when the body has loaded. -->
+<body onLoad='startRealtime()'>
+
+    <!-- STUDENT PAGE -->
+    <header>
+		<img src="../images/codecloud.png" height= 100px class="logo"/>
+		<img src="../images/codecloudheader.png" height=55px align=center />
+    </header>
+    
+    <div class="sidebar"></div>
+    
+    <div class= "content">
+    
+	<div id ="codeDiv" class="codearea" contenteditable>
+
+		<textarea id="codeArea" class="codearea" contenteditable>
+		</textarea>
+	
+
+	</div>
+	<script type="text/javascript">
+			var editor = ace.edit("codeDiv");
+		document.uEditor = editor;
+		document.uEditor = editor;
+		editor.setTheme("ace/theme/Chrome");
+		editor.getSession().setMode("ace/mode/javascript");
+	</script>
+	
+	<script>
+
+	</script>
+		
+    <p>
+		<ul>
+			<li id="selectLanguage"><span id="selectedLanguage">Javascript</span>
+			<img src="../images/arrow.png" height="15px" width="15px" style="z-index:100;float:right"/>
+
+			<ul id="language-list" style="z-index:100">
+				<li id="C">C</li>
+				<li id="C++">C++</li>
+				<li id="HTML">HTML</li>
+				<li id="Java">Java</li>
+				<li id="Javascript">Javascript</li>
+				<li id="MATLAB">MATLAB</li>
+				<li id="PHP">PHP</li>
+				<li id="Python">Python</li>
+				<li id="Ruby">Ruby</li>
+				<li id="SQL">SQL</li>
+			</ul>
+			</li>
+		</ul>
+		<script type="text/javascript">
+
+			document.getElementById("selectLanguage").onmouseover = function(){
+				document.getElementById("language-list").style.display="block";
+			};
+			// locate your element and add the Click Event Listener
+			document.getElementById("language-list").addEventListener("click",function(e) {
+				// e.target is our targetted element.
+							// try doing console.log(e.target.nodeName), it will result LI
+				if(e.target && e.target.nodeName == "LI") {
+					var language = "ace/mode/" + e.target.id.toLowerCase();
+					document.uEditor.getSession().setMode(language);
+					console.log(e.target.id + " was clicked");
+					document.getElementById('selectedLanguage').innerHTML=e.target.id;
+					document.uList = document.getElementById('language-list');
+					document.getElementById('language-list').style.display='none';
+					
+					var languageMap = doc.getModel().getRoot().get('languageMap');
+					console.log("IN MAPPING: " + e.target.id);
+					console.log(document.sessionId);
+					console.log(e.target.id);
+					languageMap.set(document.sessionId, e.target.id);
+					
+				}
+			});
+		</script>
+
+    <button name="help" type="button" class="btn" id="alert">Alert Instructor</button>
+	<button id="authorizeButton" class="btn" disabled>Authorize</button></p>
+    </div>
+
+
+  <script>
+    /**
+     * This function is called the first time that the Realtime model is created
+     * for a file. This function should be used to initialize any values of the
+     * model. In this case, we just create the single string model that will be
+     * used to control our text box. The string has a starting value of 'Hello
+     * Realtime World!', and is named 'text'.
+     * @param model {gapi.drive.realtime.Model} the Realtime root model object.
+     */
+    function initializeModel(model) {
+
+    }
+
+    /**
+     * This function is called when the Realtime file has been loaded. It should
+     * be used to initialize any user interface components and event handlers
+     * depending on the Realtime model. In this case, create a text control binder
+     * and bind it to our string model that we created in initializeModel.
+     * @param doc {gapi.drive.realtime.Document} the Realtime document.
+     */
+    function onFileLoaded(doc) {
+		var sessionId;
+		
+		//listener for alert
+		document.getElementById('alert').addEventListener('click', function(eve){
+			console.log("alertInstructor");
+			console.log(document.uID);
+			var alertString = doc.getModel().getRoot().get('alert');
+			alertString.setText(document.uID);
+			console.log(alertString.toString());
+		});
+			console.log("HERERERER");
+
+		document.hasInitSelf = false;
+		doc.addEventListener(gapi.drive.realtime.EventType.COLLABORATOR_JOINED, function(eve){
+			if (document.hasInitSelf){
+				return;
+			}
+			else{
+				document.hasInitSelf = true;
+			}
+			var codeMap = doc.getModel().getRoot().get('codeMap');
+			var nameMap = doc.getModel().getRoot().get('nameMap');
+			var user = eve.collaborator;
+			console.log(user);
+			sessionId = user.sessionId.toString();
+			sessionId = sessionId + Math.random().toString(36);
+			document.uID = sessionId;
+			/*if (user.isMe){
+				document.uID = sessionId;
+			}*/
+			var codeString = codeMap.get(sessionId);
+			document.uString = codeString;
+			if (!codeString){
+				codeString = doc.getModel().createString();
+			}
+			this.codeString = codeString;
+			
+			
+				document.sessionId = sessionId;
+				var getName = function(){
+					var name = window.prompt("Enter Name:");
+					if (name == null || name.trim() === ""){
+						getName();
+					}
+					else{
+						nameMap.set(sessionId, name);
+					}
+				};
+				getName();
+				codeMap.set(sessionId, codeString);
+			
+
+			document.thisUserEdited = false;
+			document.editorNotEdited = false;
+			
+			var languageMap = doc.getModel().getRoot().get('languageMap');
+			languageMap.set(sessionId, 'Javascript');
+			
+			var changeLanguage = function(evt)
+			{
+				if (sessionId === evt.property)
+				{
+					var languageKey = evt.newValue;
+					var language = "ace/mode/" + languageKey;
+					editor.getSession().setMode(language);
+					document.getElementById('selectedLanguage').innerHTML=languageKey;
+				}
+			}
+			var languageMap = doc.getModel().getRoot().get('languageMap');
+			languageMap.addEventListener(gapi.drive.realtime.EventType.VALUE_CHANGED, changeLanguage);
+		
+			document.keyUp = true;
+			
+			var updateTextArea = function(e){
+				if (document.keyUp){
+					document.keyUp = false;
+					return;
+				}
+				editor.setValue(codeString.getText());
+			};
+			
+			codeString.addEventListener(gapi.drive.realtime.EventType.TEXT_INSERTED, updateTextArea);
+			codeString.addEventListener(gapi.drive.realtime.EventType.TEXT_DELETED, updateTextArea);
+			updateTextArea();
+			
+			
+			var codeArea = document.getElementById('codeDiv').childNodes.item(0);
+		
+			codeArea.onkeyup = function(){
+				document.keyUp = true;
+				codeString.setText(document.uEditor.getValue());
+			};
+		});
+		document.getElementById('codeDiv').onkeyup = function() {
+			console.log("onkeyup: " + editor.getValue());
+			//codeString.setText(editor.getValue());
+		};
+		this.doc = doc;
+       
+		
+
+
+    }
+    /**
+     * Options for the Realtime loader.
+     */
+    var realtimeOptions = {
+      /**
+       * Client ID from the console.
+       */
+      clientId: '976896987430-2ikoto1v6urc48u5f4i1devvqtao8v29.apps.googleusercontent.com',
+
+      /**
+       * The ID of the button to click to authorize. Must be a DOM element ID.
+       */
+      authButtonElementId: 'authorizeButton',
+
+      /**
+       * Function to be called when a Realtime model is first created.
+       */
+      initializeModel: initializeModel,
+
+      /**
+       * Autocreate files right after auth automatically.
+       */
+      autoCreate: true,
+
+      /**
+       * The name of newly created Drive files.
+       */
+      defaultTitle: "New Realtime Quickstart File",
+
+      /**
+       * The MIME type of newly created Drive Files. By default the application
+       * specific MIME type will be used:
+       *     application/vnd.google-apps.drive-sdk.
+       */
+      newFileMimeType: null, // Using default.
+
+      /**
+       * Function to be called every time a Realtime file is loaded.
+       */
+      onFileLoaded: onFileLoaded,
+
+      /**
+       * Function to be called to inityalize custom Collaborative Objects types.
+       */
+      registerTypes: null, // No action.
+
+      /**
+       * Function to be called after authorization and before loading files.
+       */
+      afterAuth: null // No action.
+    }
+
+    /**
+     * Start the Realtime loader with the options.
+     */
+    function startRealtime() {
+      var realtimeLoader = new rtclient.RealtimeLoader(realtimeOptions);
+      realtimeLoader.start();
+    }
+
+  </script>
+</body>
+</html>
